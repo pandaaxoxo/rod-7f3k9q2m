@@ -1,0 +1,637 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta name="robots" content="noindex, nofollow, noarchive">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Предки Анастасии и Алексея Шапедько</title>
+<style>
+@page { size:A4; margin:16mm 17mm; }
+:root {
+ --paper:#ffffff; --canvas:#eeeae6; --ink:#242323; --muted:#625d5a; --line:#d5cfca;
+ --accent:#812f34; --accent-soft:#f8efed; --soft:#f6f3f0;
+ --ok:#285d39; --ok-bg:#eaf2e9; --maybe:#725011; --maybe-bg:#faf0d9;
+ --no:#842f34; --no-bg:#f8e9e7; --family:#344f70; --family-bg:#eaf0f7;
+ --sans:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans","Noto Sans Armenian","Noto Sans Georgian","Noto Sans Hebrew","DejaVu Sans",Arial,sans-serif;
+ --serif:Georgia,"Times New Roman","Noto Serif","Noto Serif Armenian","Noto Serif Georgian","Noto Serif Hebrew","DejaVu Serif","Sylfaen",serif; --tree-gap:40px;
+ color-scheme:light;
+}
+* { box-sizing:border-box; }
+html { scroll-padding-top:24px; }
+body { margin:0; background:var(--canvas); color:var(--ink); font:1.0625rem/1.75 var(--serif); }
+a { color:var(--accent); text-underline-offset:3px; text-decoration-thickness:1px; }
+a:hover { text-decoration-thickness:2px; }
+a:focus-visible,summary:focus-visible,.table-wrap:focus-visible { outline:3px solid var(--accent); outline-offset:5px; }
+.report-shell { max-width:1180px; margin:32px auto; background:var(--paper); border-top:7px solid var(--ink); }
+.report-topline { display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px 20px; padding:17px 52px; border-bottom:1px solid var(--ink); color:var(--muted); font:600 .75rem/1.5 var(--sans); text-transform:none; letter-spacing:.12em; }
+.report-header { padding:40px 52px 32px; border-bottom:1px solid var(--ink); }
+.report-intro { display:grid; grid-template-columns:minmax(0,1.7fr) minmax(0,1fr); gap:0 48px; align-items:start; }
+.eyebrow { margin:0 0 10px; grid-column:1; font:600 .75rem/1.5 var(--sans); letter-spacing:.16em; text-transform:none; color:var(--accent); }
+h1 { overflow-wrap:anywhere; grid-column:1; font:400 clamp(3rem,7vw,5.75rem)/1.03 var(--serif); letter-spacing:normal; margin:0 0 16px; text-wrap:balance; }
+.subtitle { grid-column:1; font:1.125rem/1.55 var(--serif); max-width:42ch; color:var(--muted); margin:0 0 24px; }
+.report-meta { grid-column:2; grid-row:2/4; margin:6px 0 0; display:grid; gap:16px; padding-left:24px; border-left:1px solid var(--line); font:.8125rem/1.7 var(--sans); }
+.report-meta dt { font:600 .75rem/1.5 var(--sans); text-transform:none; letter-spacing:.06em; color:var(--muted); margin:0 0 3px; }
+.report-meta dd { margin:0; }
+.demo-note { grid-column:1/-1; padding:12px 0; border-top:1px solid var(--line); border-bottom:1px solid var(--line); font:.75rem/1.65 var(--sans); color:var(--muted); }
+.demo-note strong { color:var(--ink); }
+.family-tree { margin:30px auto 0; width:100%; max-width:780px; min-width:0; }
+.tree-heading { display:flex; align-items:baseline; justify-content:space-between; flex-wrap:wrap; gap:8px 20px; margin-bottom:16px; }
+.tree-heading h2 { font:400 1.75rem/1.3 var(--serif); color:var(--ink); letter-spacing:-.025em; border:0; padding:0; margin:0; }
+.tree-heading>span { color:var(--muted); font:.75rem/1.5 var(--sans); }
+.tree-row { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:var(--tree-gap); }
+.person-card { min-width:0; overflow-wrap:anywhere; display:grid; grid-template-columns:minmax(0,1fr) auto; gap:4px 12px; padding:10px 14px 12px; border:0; border-top:1px solid var(--line); border-bottom:1px solid var(--line); background:var(--paper); text-decoration:none; transition:background-color 160ms ease; }
+a.person-card:hover { background:var(--accent-soft); }
+.person-role { grid-column:1/-1; color:var(--muted); font:600 .75rem/1.4 var(--sans); letter-spacing:.07em; text-transform:none; }
+.person-name { grid-column:1/-1; color:var(--ink); font:400 1.375rem/1.3 var(--serif); letter-spacing:normal; overflow-wrap:anywhere; }
+.person-years { color:var(--muted); font:.75rem/1.6 var(--sans); font-variant-numeric:tabular-nums; }
+.person-status { color:var(--accent); font:600 .75rem/1.6 var(--sans); }
+.person-card.subject { background:var(--accent-soft); border-top:3px solid var(--accent); border-bottom:1px solid var(--accent); padding-top:8px; }
+.person-card.subject .person-role { color:var(--accent); }
+.person-card.subject .person-status { grid-column:1/-1; font-weight:400; color:var(--muted); }
+.spouse-group { position:relative; }
+.spouse-group::before { content:""; position:absolute; top:50%; left:calc(50% - var(--tree-gap)/2); width:var(--tree-gap); height:4px; border-top:1px solid var(--accent); border-bottom:1px solid var(--accent); }
+.tree-connectors { position:relative; width:100%; height:24px; color:var(--accent); }
+.tree-connectors::before { content:""; position:absolute; top:0; bottom:0; left:calc(25% - var(--tree-gap)/4); border-left:1px solid currentColor; }
+.mother-branch { position:absolute; top:0; left:calc(25% - var(--tree-gap)/4); width:calc(50% + var(--tree-gap)/2); height:10px; border-right:1px solid currentColor; border-bottom:1px solid currentColor; }
+.child-row .person-card { grid-column:1; }
+.tree-caption { font:.75rem/1.65 var(--sans); color:var(--muted); margin-top:14px; }
+.tree-caption span { display:block; margin-top:4px; }
+.report-nav { display:flex; flex-wrap:wrap; gap:4px 32px; margin:0 52px; padding:6px 0; border-bottom:1px solid var(--ink); font:600 .75rem/1.5 var(--sans); text-transform:none; letter-spacing:.06em; }
+.report-nav a { min-height:44px; display:inline-flex; align-items:center; text-decoration:none; }
+.report-nav a:hover { text-decoration:underline; }
+main { max-width:900px; padding:36px 52px 44px; margin:0 auto; }
+h2 { margin:44px 0 18px; padding:14px 0 0; border-top:1px solid var(--ink); color:var(--ink); font:400 clamp(1.625rem,3vw,2rem)/1.3 var(--serif); letter-spacing:-.025em; break-after:avoid; text-wrap:balance; }
+h3 { margin:28px 0 14px; color:var(--accent); font:600 .875rem/1.5 var(--sans); letter-spacing:.04em; }
+p { margin:0 0 18px; }
+p,li,td { overflow-wrap:break-word; }
+main>p { max-width:72ch; }
+.lead { padding:22px 24px 24px; background:var(--soft); border-top:3px solid var(--accent); border-bottom:1px solid var(--line); margin-bottom:24px; }
+.lead h2 { margin:0 0 14px; padding:0; border:0; color:var(--accent); font:600 .75rem/1.5 var(--sans); text-transform:none; letter-spacing:.12em; }
+.lead ul { margin:0; padding-left:18px; }
+.lead li { margin-bottom:12px; }
+.lead li:last-child { margin-bottom:0; }
+.tag { display:inline-block; max-width:100%; padding:2px 7px; margin:2px 0; border-radius:2px; font:600 .75rem/1.5 var(--sans); white-space:nowrap; }
+.ok { color:var(--ok); background:var(--ok-bg); }
+.maybe { color:var(--maybe); background:var(--maybe-bg); }
+.no { color:var(--no); background:var(--no-bg); }
+.fam { color:var(--family); background:var(--family-bg); }
+.evidence-guide { border-bottom:1px solid var(--line); color:var(--muted); margin:0 0 30px; font:.8125rem/1.7 var(--sans); }
+.evidence-guide h3 { padding:12px 0 0; margin:0; font:600 .8125rem/1.7 var(--sans); color:var(--ink); letter-spacing:normal; }
+.legend { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px 24px; padding:8px 0 18px; }
+.legend .tag { display:table; margin-bottom:4px; }
+.table-wrap { max-width:100%; overflow-x:auto; margin:16px 0 20px; }
+table { width:100%; border-collapse:collapse; font:.875rem/1.65 var(--sans); }
+th,td { text-align:start; vertical-align:top; border-bottom:1px solid var(--line); padding:12px 16px 12px 0; }
+th { color:var(--muted); font:600 .75rem/1.5 var(--sans); text-transform:none; letter-spacing:.04em; border-bottom:1px solid var(--ink); }
+th:last-child,td:last-child { padding-right:0; }
+td.d { width:18%; min-width:90px; }
+td.t { width:17%; }
+tr { break-inside:avoid; }
+tr:target { background:var(--accent-soft); }
+blockquote { margin:28px 0; padding:2px 0 2px 20px; border-left:2px solid var(--accent); color:var(--accent); font:italic 1.375rem/1.5 var(--serif); }
+ol,ul { margin:0 0 22px; padding-left:22px; }
+li { margin-bottom:10px; }
+.small { color:var(--muted); font:.8125rem/1.65 var(--sans); }
+.src li { color:var(--muted); font:.8125rem/1.75 var(--sans); margin-bottom:18px; padding-left:4px; }
+.src li b { color:var(--ink); }
+:target { scroll-margin-top:24px; }
+.report-footer { display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px; padding:20px 52px; border-top:1px solid var(--ink); color:var(--muted); font:.75rem/1.5 var(--sans); }
+.skip-link { position:absolute; top:8px; left:8px; padding:12px 16px; z-index:10; background:var(--paper); transform:translateY(-200%); font:1rem/1.5 var(--sans); }
+.skip-link:focus { transform:translateY(0); }
+@media(max-width:959px) {
+ .report-shell { margin:16px; }
+ .report-header { padding:32px; }
+ .report-topline,.report-footer { padding-left:32px; padding-right:32px; }
+ .report-nav { margin-left:32px; margin-right:32px; }
+ .report-intro { gap:0 24px; }
+ .person-card { display:flex; flex-direction:column; gap:4px; }
+ main { padding:32px; }
+}
+@media(max-width:600px) {
+ :root { --tree-gap:20px; }
+ body { font-size:1rem; }
+ .report-shell { margin:0; border-top-width:5px; }
+ .report-topline { padding:13px 20px; font-size:.75rem; letter-spacing:.06em; }
+ .report-header { padding:24px 20px; }
+ .report-intro { display:block; }
+ h1 { font-size:3rem; }
+ .subtitle { font-size:1rem; margin-bottom:18px; }
+ .report-meta { display:flex; flex-wrap:wrap; gap:10px 24px; padding:0; margin:0 0 18px; border:0; }
+ .demo-note { font-size:.75rem; }
+ .family-tree { margin-top:24px; }
+ .tree-heading { align-items:start; }
+ .tree-heading h2 { font-size:1.5rem; }
+ .person-card { padding:10px; }
+ .person-name { font-size:1.125rem; }
+ .person-role { letter-spacing:.03em; }
+ .person-card.subject { padding-top:8px; }
+ .tree-connectors { height:22px; }
+ .tree-caption { font-size:.75rem; }
+ .report-nav { margin:0 20px; gap:4px 20px; letter-spacing:.02em; }
+ main { padding:24px 20px; }
+ .lead { padding:20px; }
+ .legend { grid-template-columns:1fr; }
+ h2 { margin-top:36px; }
+ table { min-width:560px; }
+ th,td { padding-right:12px; }
+ .report-footer { padding:20px; }
+}
+@media(prefers-reduced-motion:reduce) { *,*::before,*::after { transition:none !important; scroll-behavior:auto !important; } }
+@media print {
+ body { background:white; font-size:10.5pt; }
+ .report-shell { max-width:none; margin:0; border:0; }
+ .report-topline,.report-footer { padding:8pt 0; font-size:8pt; }
+ .report-header { padding:16pt 0; }
+ .report-intro { gap:0 24pt; }
+ h1 { font-size:34pt; }
+ .subtitle { font-size:11pt; }
+ .demo-note { font-size:8pt; }
+ .family-tree { max-width:145mm; margin-top:18pt; break-inside:avoid; }
+ .person-card { padding:8pt; }
+ .person-name { font-size:12pt; }
+ .person-role,.person-years,.person-status,.tree-caption { font-size:8pt; }
+ .report-nav,.skip-link { display:none; }
+ main { padding:0; }
+ h2 { font-size:16pt; margin-top:20pt; }
+ .table-wrap { overflow:visible; }
+ table { min-width:0; font-size:8.5pt; }
+ th { font-size:8pt; }
+ .evidence-guide { break-inside:avoid; font-size:8.5pt; }
+ .legend { grid-template-columns:repeat(2,minmax(0,1fr)); }
+ a { color:inherit; }
+ .person-card.subject { background:white; }
+}
+/* Local font fallbacks retain multilingual text without network requests. */
+bdi { unicode-bidi:isolate; }
+html :lang(ar), html :lang(he), html :lang(yi), html :lang(ka), html :lang(hy) { letter-spacing:normal; }
+.report-note { grid-column:1/-1; color:var(--muted); font:.8125rem/1.65 var(--sans); }
+.tree-connectors.uncertain::before { border-left-style:dashed; }
+.mother-branch.uncertain { border-right-style:dashed; border-bottom-style:dashed; }
+.spouse-group.uncertain::before { border-top-style:dashed; border-bottom-style:dashed; }
+.photos { display:flex; flex-wrap:wrap; gap:16px; align-items:flex-start; }
+.photos figure { margin:0; }
+figure img { display:block; max-width:100%; height:auto; }
+figcaption { font:.8125rem/1.65 var(--sans); color:var(--muted); margin-top:8px; }
+.docfig { margin:24px 0; break-inside:avoid; }
+.docfig img { width:100%; max-height:225mm; object-fit:contain; border:1px solid var(--line); }
+@media screen { .pb { break-before:auto; } .docfig img { max-height:none; } }
+@media print { .pb { break-before:page; } .tag { white-space:normal; } }
+
+
+.vtree-tools { display:flex; flex-wrap:wrap; align-items:center; gap:8px 12px; margin:18px 0 0; font:.8125rem/1.5 var(--sans); color:var(--muted); }
+.vtree-tools button { font:600 .8125rem/1 var(--sans); padding:8px 12px; border:1px solid var(--line); background:var(--paper); color:var(--ink); border-radius:3px; cursor:pointer; min-height:36px; }
+.vtree-tools button:hover { background:var(--accent-soft); }
+.vt-legend { margin:6px 0 0; } .vt-legend .tag { display:inline-block; }
+.vtree-wrap { overflow:auto; max-height:78vh; margin:24px 0 0; padding:8px 0 10px; border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+.vtree { display:block; margin:0 auto; font-family:var(--sans); }
+.vtree a { cursor:pointer; }
+.vtree a:hover .vt-box { fill:var(--accent-soft); }
+.vt-box { fill:var(--paper); stroke:var(--line); stroke-width:1; }
+.vt-box.vt-found { stroke:var(--ok); stroke-width:1.4; }
+.vt-box.vt-me { fill:var(--accent-soft); stroke:var(--accent); stroke-width:1.6; }
+.vt-box.vt-unk { fill:var(--soft); stroke-dasharray:4 3; }
+.vt-bar.m { fill:#5b7fa6; } .vt-bar.f { fill:#b9707a; }
+.vt-name { font:400 14px var(--serif); fill:var(--ink); }
+.vt-sub { font:600 10.5px var(--sans); fill:var(--muted); }
+.vt-tag { font:600 10px var(--sans); }
+.vt-line { fill:none; stroke:var(--muted); stroke-width:1.3; }
+.vt-marr { stroke:var(--accent); stroke-width:1.3; }
+
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+.report-header h1{font-size:clamp(2rem,3.6vw,3rem);line-height:1.12;max-width:20ch}
+main,.person{overflow-wrap:break-word}
+@media (max-width:600px){
+  html body{font-size:1rem}
+  .report-header h1{font-size:2rem}
+  .vtree-wrap{max-height:62vh;overscroll-behavior:contain}
+  .mapwrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .migmap{min-width:640px}
+  figcaption,.tree-caption,.vt-legend,.report-nav a{font-size:.8125rem}
+  .src li,.small{font-size:.875rem}
+  .report-nav{gap:0 14px}
+  .report-nav a{min-height:36px}
+  .tag{white-space:normal}
+}
+.life{margin:6px 0 12px 0;padding-left:20px}.life li{margin:4px 0}h4{margin:14px 0 4px;font-size:15px}
+body { font-size:1.125rem; }
+main>p, main li { max-width:68ch; }
+.pedigree-wrap { overflow-x:auto; margin:26px 0 0; padding-bottom:6px; }
+.pedigree { display:grid; grid-template-columns:repeat(5,minmax(150px,1fr)); grid-template-rows:repeat(16,auto); gap:6px 18px; min-width:880px; }
+.pedigree .slot { display:flex; flex-direction:column; justify-content:center; padding:7px 10px; border-left:3px solid var(--line); background:var(--paper); text-decoration:none; color:var(--ink); min-height:54px; }
+.pedigree a.slot:hover { background:var(--accent-soft); }
+.pedigree .slot.m { border-left-color:#5b7fa6; } .pedigree .slot.f { border-left-color:#b9707a; }
+.pedigree .slot.subject { background:var(--accent-soft); border-left-color:var(--accent); }
+.pedigree .slot.unknown { color:var(--muted); background:transparent; border-left-style:dotted; }
+.pedigree .slot.found { box-shadow:inset 0 0 0 1px var(--ok); }
+.pedigree .nm { font:400 1rem/1.3 var(--serif); }
+.pedigree .rl { font:600 .6875rem/1.4 var(--sans); color:var(--muted); letter-spacing:.03em; }
+.pedigree .tag { font-size:.6875rem; white-space:normal; margin-top:3px; align-self:flex-start; }
+.gen-head { display:grid; grid-template-columns:repeat(5,minmax(150px,1fr)); gap:0 18px; min-width:880px; font:600 .75rem/1.4 var(--sans); color:var(--muted); margin-bottom:6px; }
+.person { margin:26px 0; padding:18px 22px; background:var(--soft); border-left:3px solid var(--line); }
+.person.m { border-left-color:#5b7fa6; } .person.f { border-left-color:#b9707a; }
+.person h3 { margin:0 0 4px; color:var(--ink); font:400 1.375rem/1.35 var(--serif); letter-spacing:normal; }
+.person .yrs { font:.875rem/1.5 var(--sans); color:var(--muted); margin:0 0 10px; }
+.person p:last-child { margin-bottom:0; }
+.quote { margin:14px 0; padding:10px 16px; background:var(--paper); border-left:2px solid var(--accent); font-style:italic; }
+.chain { display:flex; flex-wrap:wrap; align-items:center; gap:6px 4px; margin:10px 0 18px; }
+.chain span.p { padding:4px 10px; border-left:3px solid #5b7fa6; background:var(--soft); }
+.chain span.arr { color:var(--muted); font-family:var(--sans); }
+.migmap { display:block; width:100%; height:auto; border:1px solid var(--line); background:var(--soft); }
+.migmap .route { fill:none; stroke:var(--accent); stroke-width:2.4; stroke-dasharray:8 6; }
+.migmap .pt.family { fill:var(--accent); stroke:var(--paper); stroke-width:2; }
+.migmap .pt.ref { fill:var(--muted); }
+.migmap .pn { font:600 17px var(--serif); fill:var(--ink); }
+.migmap .pn.ref { font:13px var(--sans); fill:var(--muted); }
+.migmap .pnote { font:12.5px var(--sans); fill:var(--muted); }
+.migmap .scale { stroke:var(--ink); stroke-width:2; }
+.migmap .rlab { font:italic 12.5px var(--serif); fill:var(--accent); }
+.qlist li { margin-bottom:8px; }
+.src li { font-size:.8125rem; }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#report-content">К тексту</a>
+<div class="report-shell">
+<div class="report-topline"><span>Наша семья</span><span>Ноябрь 2026 · будет дополняться</span></div>
+<header class="report-header" id="top">
+  <div class="report-intro">
+    <p class="eyebrow">Откуда мы родом</p>
+    <h1>Предки Анастасии и&nbsp;Алексея Шапедько</h1>
+    <p class="subtitle">Папина линия — Шапедько и Фещенко из Великой Топали. Мамина — Жгутовы из Климова, Кузовы и Кожемяки из староверческих Лужков.</p>
+    <dl class="report-meta">
+      <div><dt>Откуда сведения</dt><dd>Рассказы родителей, древо, которое составил Алексей, родословная книга дальней родственницы и архивные документы, открытые в интернете</dd></div>
+      <div><dt>Кто здесь есть</dt><dd>Только прямые предки: родители, бабушки и дедушки, прадеды и дальше. Дяди, тёти и их семьи сюда не входят</dd></div>
+    </dl>
+  </div>
+  <figure class="family-tree" style="max-width:none" aria-labelledby="tree-title">
+    <div class="tree-heading"><h2 id="tree-title">Древо</h2><span>все известные предки; сверху — самые старшие</span></div>
+    <div class="vtree-tools"><button type="button" id="vt-fit">Показать целиком</button><button type="button" id="vt-big">Крупно</button><span>Древо можно листать вбок. Нажмите на карточку, чтобы прочитать о человеке.</span></div>
+    <div class="vtree-wrap" id="vt-wrap" tabindex="0" role="region" aria-label="Древо; листается вбок и вниз">
+<svg class="vtree" width="3240" height="1582" viewBox="-10 -10 3240 1582" role="img" aria-labelledby="vt-t vt-d" xmlns="http://www.w3.org/2000/svg">
+<title id="vt-t">Древо предков Анастасии Шапедько</title><desc id="vt-d">Сверху — самые старшие известные предки, внизу — Анастасия. Пунктир — связь под вопросом.</desc>
+<line x1="1168.0" y1="1384.0" x2="2592.0" y2="1384.0" class="vt-marr"/>
+<path d="M1880.0,1384.0 V1451.0 H1610.0" class="vt-line"/>
+<line x1="844.0" y1="1250.0" x2="1728.0" y2="1250.0" class="vt-marr"/>
+<path d="M1286.0,1250.0 V1317.0 H1070.0 V1340.0" class="vt-line"/>
+<line x1="2464.0" y1="1250.0" x2="2808.0" y2="1250.0" class="vt-marr"/>
+<path d="M2636.0,1250.0 V1317.0 H2690.0 V1340.0" class="vt-line"/>
+<line x1="736.0" y1="1116.0" x2="1296.0" y2="1116.0" class="vt-marr"/>
+<path d="M1016.0,1116.0 V1183.0 H746.0 V1206.0" class="vt-line"/>
+<line x1="1816.0" y1="1116.0" x2="1944.0" y2="1116.0" class="vt-marr"/>
+<path d="M1880.0,1116.0 V1183.0 H1826.0 V1206.0" class="vt-line"/>
+<line x1="2356.0" y1="1116.0" x2="2376.0" y2="1116.0" class="vt-marr"/>
+<path d="M2366.0,1116.0 V1183.0 H2366.0 V1206.0" class="vt-line"/>
+<line x1="2788.0" y1="1116.0" x2="2916.0" y2="1116.0" class="vt-marr"/>
+<path d="M2852.0,1116.0 V1183.0 H2906.0 V1206.0" class="vt-line"/>
+<line x1="628.0" y1="982.0" x2="1080.0" y2="982.0" class="vt-marr"/>
+<path d="M854.0,982.0 V1049.0 H638.0 V1072.0" class="vt-line" stroke-dasharray="5 4"/>
+<line x1="1708.0" y1="982.0" x2="1728.0" y2="982.0" class="vt-marr"/>
+<path d="M1718.0,982.0 V1049.0 H1718.0 V1072.0" class="vt-line" stroke-dasharray="5 4"/>
+<path d="M2474.0,1026.0 V1049.0 H2474.0 V1072.0" class="vt-line"/>
+<path d="M2690.0,1026.0 V1049.0 H2690.0 V1072.0" class="vt-line"/>
+<line x1="3004.0" y1="982.0" x2="3024.0" y2="982.0" class="vt-marr"/>
+<path d="M3014.0,982.0 V1049.0 H3014.0 V1072.0" class="vt-line"/>
+<path d="M530.0,892.0 V915.0 H530.0 V938.0" class="vt-line"/>
+<path d="M1610.0,892.0 V915.0 H1610.0 V938.0" class="vt-line"/>
+<path d="M530.0,758.0 V781.0 H530.0 V804.0" class="vt-line"/>
+<line x1="520.0" y1="580.0" x2="864.0" y2="580.0" class="vt-marr"/>
+<path d="M692.0,580.0 V647.0 H530.0 V670.0" class="vt-line"/>
+<line x1="412.0" y1="446.0" x2="648.0" y2="446.0" class="vt-marr"/>
+<path d="M530.0,446.0 V513.0 H422.0 V536.0" class="vt-line" stroke-dasharray="5 4"/>
+<line x1="304.0" y1="312.0" x2="432.0" y2="312.0" class="vt-marr"/>
+<path d="M368.0,312.0 V379.0 H314.0 V402.0" class="vt-line"/>
+<line x1="196.0" y1="178.0" x2="216.0" y2="178.0" class="vt-marr"/>
+<path d="M206.0,178.0 V245.0 H206.0 V268.0" class="vt-line"/>
+<path d="M98.0,88.0 V111.0 H98.0 V134.0" class="vt-line"/>
+<path d="M1502.0,1451.0 H1718.0 M1502.0,1451.0 V1474.0 M1718.0,1451.0 V1474.0" class="vt-line"/>
+<rect x="1620.0" y="1474.0" width="196" height="88" rx="3" class="vt-box m"/><rect x="1620.0" y="1474.0" width="4" height="88" class="vt-bar m"/><text x="1632.0" y="1490.0" class="vt-sub">брат</text><text x="1632.0" y="1507.0" class="vt-name">Алексей Сергеевич</text><text x="1632.0" y="1523.0" class="vt-name">Шапедько</text>
+<rect x="1404.0" y="1474.0" width="196" height="88" rx="3" class="vt-box f vt-me"/><rect x="1404.0" y="1474.0" width="4" height="88" class="vt-bar f"/><text x="1416.0" y="1490.0" class="vt-sub">вы</text><text x="1416.0" y="1507.0" class="vt-name">Анастасия Сергеевна</text><text x="1416.0" y="1523.0" class="vt-name">Шапедько</text>
+<a href="#shapedko"><rect x="972.0" y="1340.0" width="196" height="88" rx="3" class="vt-box m"/><rect x="972.0" y="1340.0" width="4" height="88" class="vt-bar m"/><text x="984.0" y="1356.0" class="vt-sub">папа</text><text x="984.0" y="1373.0" class="vt-name">Сергей Михайлович</text><text x="984.0" y="1389.0" class="vt-name">Шапедько</text></a>
+<a href="#zhgutov"><rect x="2592.0" y="1340.0" width="196" height="88" rx="3" class="vt-box f"/><rect x="2592.0" y="1340.0" width="4" height="88" class="vt-bar f"/><text x="2604.0" y="1356.0" class="vt-sub">мама</text><text x="2604.0" y="1373.0" class="vt-name">Елена Викторовна</text><text x="2604.0" y="1389.0" class="vt-name">Шапедько (Жгутова)</text></a>
+<a href="#p-mikhail"><rect x="648.0" y="1206.0" width="196" height="88" rx="3" class="vt-box m vt-found"/><rect x="648.0" y="1206.0" width="4" height="88" class="vt-bar m"/><text x="660.0" y="1222.0" class="vt-sub">дедушка · 1926, В. Топаль</text><text x="660.0" y="1239.0" class="vt-name">Михаил Иосифович</text><text x="660.0" y="1255.0" class="vt-name">Шапедько</text><rect x="660.0" y="1274.0" width="104" height="15" rx="2" fill="var(--ok-bg)"/><text x="666.0" y="1285.0" class="vt-tag" fill="var(--ok)">есть документ</text></a>
+<a href="#feshchenko"><rect x="1728.0" y="1206.0" width="196" height="88" rx="3" class="vt-box f"/><rect x="1728.0" y="1206.0" width="4" height="88" class="vt-bar f"/><text x="1740.0" y="1222.0" class="vt-sub">бабушка · 1932–2023</text><text x="1740.0" y="1239.0" class="vt-name">Наталья Васильевна</text><text x="1740.0" y="1255.0" class="vt-name">Шапедько (Фещенко)</text></a>
+<a href="#zhgutov"><rect x="2268.0" y="1206.0" width="196" height="88" rx="3" class="vt-box m"/><rect x="2268.0" y="1206.0" width="4" height="88" class="vt-bar m"/><text x="2280.0" y="1222.0" class="vt-sub">дедушка · 1943–1993</text><text x="2280.0" y="1239.0" class="vt-name">Виктор Михайлович</text><text x="2280.0" y="1255.0" class="vt-name">Жгутов</text></a>
+<a href="#kuzov"><rect x="2808.0" y="1206.0" width="196" height="88" rx="3" class="vt-box f"/><rect x="2808.0" y="1206.0" width="4" height="88" class="vt-bar f"/><text x="2820.0" y="1222.0" class="vt-sub">бабушка · 1942–2021/22</text><text x="2820.0" y="1239.0" class="vt-name">Раиса Александровна</text><text x="2820.0" y="1255.0" class="vt-name">Супрун (Кузова)</text></a>
+<a href="#p-iosif"><rect x="540.0" y="1072.0" width="196" height="88" rx="3" class="vt-box m vt-found"/><rect x="540.0" y="1072.0" width="4" height="88" class="vt-bar m"/><text x="552.0" y="1088.0" class="vt-sub">прадедушка · 1892, жив в 1949</text><text x="552.0" y="1105.0" class="vt-name">Иосиф Андрианович</text><text x="552.0" y="1121.0" class="vt-name">Шапедько</text><rect x="552.0" y="1140.0" width="104" height="15" rx="2" fill="var(--ok-bg)"/><text x="558.0" y="1151.0" class="vt-tag" fill="var(--ok)">есть документ</text></a>
+<a href="#p-iosif"><rect x="1296.0" y="1072.0" width="196" height="88" rx="3" class="vt-box f"/><rect x="1296.0" y="1072.0" width="4" height="88" class="vt-bar f"/><text x="1308.0" y="1088.0" class="vt-sub">прабабушка</text><text x="1308.0" y="1105.0" class="vt-name">Марина</text><rect x="1308.0" y="1140.0" width="104" height="15" rx="2" fill="var(--family-bg)"/><text x="1314.0" y="1151.0" class="vt-tag" fill="var(--family)">со слов семьи</text></a>
+<a href="#feshchenko"><rect x="1620.0" y="1072.0" width="196" height="88" rx="3" class="vt-box m"/><rect x="1620.0" y="1072.0" width="4" height="88" class="vt-bar m"/><text x="1632.0" y="1088.0" class="vt-sub">прадедушка</text><text x="1632.0" y="1105.0" class="vt-name">Василий Семёнович</text><text x="1632.0" y="1121.0" class="vt-name">Фещенко</text><rect x="1632.0" y="1140.0" width="104" height="15" rx="2" fill="var(--family-bg)"/><text x="1638.0" y="1151.0" class="vt-tag" fill="var(--family)">со слов семьи</text></a>
+<a href="#feshchenko"><rect x="1944.0" y="1072.0" width="196" height="88" rx="3" class="vt-box f"/><rect x="1944.0" y="1072.0" width="4" height="88" class="vt-bar f"/><text x="1956.0" y="1088.0" class="vt-sub">прабабушка</text><text x="1956.0" y="1105.0" class="vt-name">Матрёна</text><rect x="1956.0" y="1140.0" width="104" height="15" rx="2" fill="var(--family-bg)"/><text x="1962.0" y="1151.0" class="vt-tag" fill="var(--family)">со слов семьи</text></a>
+<a href="#zhgutov"><rect x="2160.0" y="1072.0" width="196" height="88" rx="3" class="vt-box m"/><rect x="2160.0" y="1072.0" width="4" height="88" class="vt-bar m"/><text x="2172.0" y="1088.0" class="vt-sub">прадедушка</text><text x="2172.0" y="1105.0" class="vt-name">Михаил Жгутов</text><rect x="2172.0" y="1140.0" width="104" height="15" rx="2" fill="var(--family-bg)"/><text x="2178.0" y="1151.0" class="vt-tag" fill="var(--family)">со слов семьи</text></a>
+<a href="#zhgutov"><rect x="2376.0" y="1072.0" width="196" height="88" rx="3" class="vt-box f"/><rect x="2376.0" y="1072.0" width="4" height="88" class="vt-bar f"/><text x="2388.0" y="1088.0" class="vt-sub">прабабушка</text><text x="2388.0" y="1105.0" class="vt-name">Таисия Ивановна</text><text x="2388.0" y="1121.0" class="vt-name">Полякова</text><rect x="2388.0" y="1140.0" width="104" height="15" rx="2" fill="var(--family-bg)"/><text x="2394.0" y="1151.0" class="vt-tag" fill="var(--family)">со слов семьи</text></a>
+<a href="#p-kuzov"><rect x="2592.0" y="1072.0" width="196" height="88" rx="3" class="vt-box m vt-found"/><rect x="2592.0" y="1072.0" width="4" height="88" class="vt-bar m"/><text x="2604.0" y="1088.0" class="vt-sub">прадедушка · 1916–1982</text><text x="2604.0" y="1105.0" class="vt-name">Александр Тимофеевич</text><text x="2604.0" y="1121.0" class="vt-name">Кузов</text><rect x="2604.0" y="1140.0" width="104" height="15" rx="2" fill="var(--ok-bg)"/><text x="2610.0" y="1151.0" class="vt-tag" fill="var(--ok)">есть документ</text></a>
+<a href="#kuzov"><rect x="2916.0" y="1072.0" width="196" height="88" rx="3" class="vt-box f"/><rect x="2916.0" y="1072.0" width="4" height="88" class="vt-bar f"/><text x="2928.0" y="1088.0" class="vt-sub">прабабушка · 1923–2012</text><text x="2928.0" y="1105.0" class="vt-name">Варвара Савельевна</text><text x="2928.0" y="1121.0" class="vt-name">Кожемяка</text><rect x="2928.0" y="1140.0" width="104" height="15" rx="2" fill="var(--family-bg)"/><text x="2934.0" y="1151.0" class="vt-tag" fill="var(--family)">со слов семьи</text></a>
+<a href="#andrian"><rect x="432.0" y="938.0" width="196" height="88" rx="3" class="vt-box m vt-found"/><rect x="432.0" y="938.0" width="4" height="88" class="vt-bar m"/><text x="444.0" y="954.0" class="vt-sub">прапрадедушка · 1898–1923</text><text x="444.0" y="971.0" class="vt-name">Андриан Ефимович</text><text x="444.0" y="987.0" class="vt-name">Шапедько</text><rect x="444.0" y="1006.0" width="104" height="15" rx="2" fill="var(--ok-bg)"/><text x="450.0" y="1017.0" class="vt-tag" fill="var(--ok)">есть документ</text></a>
+<a href="#andrian"><rect x="1080.0" y="938.0" width="196" height="88" rx="3" class="vt-box f"/><rect x="1080.0" y="938.0" width="4" height="88" class="vt-bar f"/><text x="1092.0" y="954.0" class="vt-sub">прапрабабушка? · 1898 г.</text><text x="1092.0" y="971.0" class="vt-name">Иулиана Игнатова</text><rect x="1092.0" y="1006.0" width="69" height="15" rx="2" fill="var(--no-bg)"/><text x="1098.0" y="1017.0" class="vt-tag" fill="var(--no)">возможно</text></a>
+<a href="#feshchenko"><rect x="1512.0" y="938.0" width="196" height="88" rx="3" class="vt-box m vt-found"/><rect x="1512.0" y="938.0" width="4" height="88" class="vt-bar m"/><text x="1524.0" y="954.0" class="vt-sub">прапрадедушка · 1898, 1923</text><text x="1524.0" y="971.0" class="vt-name">Семён Лаврентьевич</text><text x="1524.0" y="987.0" class="vt-name">Фещенко</text><rect x="1524.0" y="1006.0" width="104" height="15" rx="2" fill="var(--ok-bg)"/><text x="1530.0" y="1017.0" class="vt-tag" fill="var(--ok)">есть документ</text></a>
+<a href="#feshchenko"><rect x="1728.0" y="938.0" width="196" height="88" rx="3" class="vt-box f"/><rect x="1728.0" y="938.0" width="4" height="88" class="vt-bar f"/><text x="1740.0" y="954.0" class="vt-sub">прапрабабушка? · 1898 г.</text><text x="1740.0" y="971.0" class="vt-name">Ольга Гаврилова</text><rect x="1740.0" y="1006.0" width="69" height="15" rx="2" fill="var(--no-bg)"/><text x="1746.0" y="1017.0" class="vt-tag" fill="var(--no)">возможно</text></a>
+<a href="#zhgutov"><rect x="2376.0" y="938.0" width="196" height="88" rx="3" class="vt-box m"/><rect x="2376.0" y="938.0" width="4" height="88" class="vt-bar m"/><text x="2388.0" y="954.0" class="vt-sub">прапрадедушка</text><text x="2388.0" y="971.0" class="vt-name">Иван Поляков</text><rect x="2388.0" y="1006.0" width="104" height="15" rx="2" fill="var(--family-bg)"/><text x="2394.0" y="1017.0" class="vt-tag" fill="var(--family)">со слов семьи</text></a>
+<a href="#kuzov"><rect x="2592.0" y="938.0" width="196" height="88" rx="3" class="vt-box m"/><rect x="2592.0" y="938.0" width="4" height="88" class="vt-bar m"/><text x="2604.0" y="954.0" class="vt-sub">прапрадедушка</text><text x="2604.0" y="971.0" class="vt-name">Тимофей Кузов</text><rect x="2604.0" y="1006.0" width="104" height="15" rx="2" fill="var(--family-bg)"/><text x="2610.0" y="1017.0" class="vt-tag" fill="var(--family)">со слов семьи</text></a>
+<a href="#kuzov"><rect x="2808.0" y="938.0" width="196" height="88" rx="3" class="vt-box m"/><rect x="2808.0" y="938.0" width="4" height="88" class="vt-bar m"/><text x="2820.0" y="954.0" class="vt-sub">прапрадедушка</text><text x="2820.0" y="971.0" class="vt-name">Савелий Кожемяка</text><rect x="2820.0" y="1006.0" width="104" height="15" rx="2" fill="var(--family-bg)"/><text x="2826.0" y="1017.0" class="vt-tag" fill="var(--family)">со слов семьи</text></a>
+<a href="#kuzov"><rect x="3024.0" y="938.0" width="196" height="88" rx="3" class="vt-box f"/><rect x="3024.0" y="938.0" width="4" height="88" class="vt-bar f"/><text x="3036.0" y="954.0" class="vt-sub">прапрабабушка</text><text x="3036.0" y="971.0" class="vt-name">Анна Кожемяка</text><rect x="3036.0" y="1006.0" width="104" height="15" rx="2" fill="var(--family-bg)"/><text x="3042.0" y="1017.0" class="vt-tag" fill="var(--family)">со слов семьи</text></a>
+<a href="#deep"><rect x="432.0" y="804.0" width="196" height="88" rx="3" class="vt-box m vt-found"/><rect x="432.0" y="804.0" width="4" height="88" class="vt-bar m"/><text x="444.0" y="820.0" class="vt-sub">в документе 1862 г.</text><text x="444.0" y="837.0" class="vt-name">Ефим Иванович Шапетька</text><rect x="444.0" y="872.0" width="104" height="15" rx="2" fill="var(--ok-bg)"/><text x="450.0" y="883.0" class="vt-tag" fill="var(--ok)">есть документ</text></a>
+<a href="#feshchenko"><rect x="1512.0" y="804.0" width="196" height="88" rx="3" class="vt-box m"/><rect x="1512.0" y="804.0" width="4" height="88" class="vt-bar m"/><text x="1524.0" y="820.0" class="vt-name">Лаврентий Фещенко</text><rect x="1524.0" y="872.0" width="104" height="15" rx="2" fill="var(--family-bg)"/><text x="1530.0" y="883.0" class="vt-tag" fill="var(--family)">со слов семьи</text></a>
+<a href="#deep"><rect x="432.0" y="670.0" width="196" height="88" rx="3" class="vt-box m vt-found"/><rect x="432.0" y="670.0" width="4" height="88" class="vt-bar m"/><text x="444.0" y="686.0" class="vt-sub">по древу Алексея; р. 1805?</text><text x="444.0" y="703.0" class="vt-name">Иван Фёдорович Шапетко</text><rect x="444.0" y="738.0" width="104" height="15" rx="2" fill="var(--ok-bg)"/><text x="450.0" y="749.0" class="vt-tag" fill="var(--ok)">есть документ</text></a>
+<a href="#deep"><rect x="864.0" y="536.0" width="196" height="88" rx="3" class="vt-box f vt-found"/><rect x="864.0" y="536.0" width="4" height="88" class="vt-bar f"/><text x="876.0" y="552.0" class="vt-sub">мать Ивана, 1805 г.</text><text x="876.0" y="569.0" class="vt-name">Агафия Демьяновна</text><text x="876.0" y="585.0" class="vt-name">Баглаева</text><rect x="876.0" y="604.0" width="104" height="15" rx="2" fill="var(--ok-bg)"/><text x="882.0" y="615.0" class="vt-tag" fill="var(--ok)">есть документ</text></a>
+<a href="#deep"><rect x="324.0" y="536.0" width="196" height="88" rx="3" class="vt-box m vt-found"/><rect x="324.0" y="536.0" width="4" height="88" class="vt-bar m"/><text x="336.0" y="552.0" class="vt-sub">сын Иван родился в 1805</text><text x="336.0" y="569.0" class="vt-name">Фёдор Васильевич</text><text x="336.0" y="585.0" class="vt-name">Шапетко</text><rect x="336.0" y="604.0" width="104" height="15" rx="2" fill="var(--ok-bg)"/><text x="342.0" y="615.0" class="vt-tag" fill="var(--ok)">есть документ</text></a>
+<a href="#deep"><rect x="648.0" y="402.0" width="196" height="88" rx="3" class="vt-box f"/><rect x="648.0" y="402.0" width="4" height="88" class="vt-bar f"/><text x="660.0" y="418.0" class="vt-sub">? · жена Василия в 1781 г.</text><text x="660.0" y="435.0" class="vt-name">Анастасия Гурьева</text><rect x="660.0" y="470.0" width="69" height="15" rx="2" fill="var(--no-bg)"/><text x="666.0" y="481.0" class="vt-tag" fill="var(--no)">возможно</text></a>
+<a href="#deep"><rect x="216.0" y="402.0" width="196" height="88" rx="3" class="vt-box m vt-found"/><rect x="216.0" y="402.0" width="4" height="88" class="vt-bar m"/><text x="228.0" y="418.0" class="vt-sub">≈1759 · списки 1764–1781</text><text x="228.0" y="435.0" class="vt-name">Василий Кондратович</text><text x="228.0" y="451.0" class="vt-name">Шапетка</text><rect x="228.0" y="470.0" width="104" height="15" rx="2" fill="var(--ok-bg)"/><text x="234.0" y="481.0" class="vt-tag" fill="var(--ok)">есть документ</text></a>
+<a href="#deep"><rect x="432.0" y="268.0" width="196" height="88" rx="3" class="vt-box f vt-found"/><rect x="432.0" y="268.0" width="4" height="88" class="vt-bar f"/><text x="444.0" y="284.0" class="vt-sub">≈1737 · опись 1767 г.</text><text x="444.0" y="301.0" class="vt-name">Васса</text><rect x="444.0" y="336.0" width="104" height="15" rx="2" fill="var(--ok-bg)"/><text x="450.0" y="347.0" class="vt-tag" fill="var(--ok)">есть документ</text></a>
+<a href="#deep"><rect x="108.0" y="268.0" width="196" height="88" rx="3" class="vt-box m vt-found"/><rect x="108.0" y="268.0" width="4" height="88" class="vt-bar m"/><text x="120.0" y="284.0" class="vt-sub">≈1730 · список 1742 г.</text><text x="120.0" y="301.0" class="vt-name">Кондрат Петрович</text><text x="120.0" y="317.0" class="vt-name">Шапетка</text><rect x="120.0" y="336.0" width="104" height="15" rx="2" fill="var(--ok-bg)"/><text x="126.0" y="347.0" class="vt-tag" fill="var(--ok)">есть документ</text></a>
+<a href="#deep"><rect x="216.0" y="134.0" width="196" height="88" rx="3" class="vt-box f vt-found"/><rect x="216.0" y="134.0" width="4" height="88" class="vt-bar f"/><text x="228.0" y="150.0" class="vt-sub">≈1682 · списки 1742, 1767</text><text x="228.0" y="167.0" class="vt-name">Фёкла Корнилиева</text><rect x="228.0" y="202.0" width="104" height="15" rx="2" fill="var(--ok-bg)"/><text x="234.0" y="213.0" class="vt-tag" fill="var(--ok)">есть документ</text></a>
+<a href="#deep"><rect x="0.0" y="134.0" width="196" height="88" rx="3" class="vt-box m vt-found"/><rect x="0.0" y="134.0" width="4" height="88" class="vt-bar m"/><text x="12.0" y="150.0" class="vt-sub">≈1662 · список 1742 г.</text><text x="12.0" y="167.0" class="vt-name">Пётр Макарович Шапетка</text><rect x="12.0" y="202.0" width="104" height="15" rx="2" fill="var(--ok-bg)"/><text x="18.0" y="213.0" class="vt-tag" fill="var(--ok)">есть документ</text></a>
+<a href="#deep"><rect x="0.0" y="0.0" width="196" height="88" rx="3" class="vt-box m vt-found"/><rect x="0.0" y="0.0" width="4" height="88" class="vt-bar m"/><text x="12.0" y="16.0" class="vt-sub">XVII век</text><text x="12.0" y="33.0" class="vt-name">Макар Шапетка</text><rect x="12.0" y="68.0" width="104" height="15" rx="2" fill="var(--ok-bg)"/><text x="18.0" y="79.0" class="vt-tag" fill="var(--ok)">есть документ</text></a>
+</svg>
+    </div>
+    <script>
+    (function(){var w=document.getElementById('vt-wrap'),s=w&&w.querySelector('svg');if(!s)return;
+    var W=s.getAttribute('width'),H=s.getAttribute('height');
+    function big(){s.setAttribute('width',W);s.setAttribute('height',H);var me=s.querySelector('.vt-me');if(me){var r=me.getBBox();w.scrollLeft=Math.max(0,r.x+r.width-w.clientWidth/2);w.scrollTop=w.scrollHeight;}}
+    function fit(){s.removeAttribute('height');if(w.clientWidth<700){s.setAttribute('width',Math.min(W,1100));w.scrollLeft=0;w.scrollTop=0;}else{s.setAttribute('width','100%');}}
+    document.getElementById('vt-fit').onclick=fit;document.getElementById('vt-big').onclick=big;
+    window.addEventListener('load',function(){setTimeout(big,50);});big();window.addEventListener('beforeprint',fit);window.addEventListener('afterprint',big);})();
+    </script>
+    <figcaption class="tree-caption">Синяя полоса — мужчины, розовая — женщины; линия между двумя людьми — пара, родители ребёнка; линия вниз — их ребёнок. Зелёная рамка — человек, найденный в архивных документах. Пунктир — разные источники записали эту связь по-разному. На карточку можно нажать — откроется рассказ о человеке.
+      <p class="vt-legend"><span class="tag ok">есть документ</span> — нашли в архиве; <span class="tag fam">со слов семьи</span> — так помнят родные, документов пока нет; <span class="tag no">в источниках по-разному</span> — разные источники записали по-разному, все варианты приведены в тексте. <span class="tag no">возможно</span> — есть косвенные сведения, прямого документа нет.</p></figcaption>
+  </figure>
+</header>
+<nav class="report-nav" aria-label="Разделы"><a href="#summary">Коротко</a><a href="#shapedko">Шапедько</a><a href="#feshchenko">Фещенко</a><a href="#zhgutov">Жгутовы</a><a href="#kuzov">Кузовы и Кожемяки</a><a href="#map">Карта</a><a href="#questions">Вопросы</a><a href="#next">Что дальше</a></nav>
+<main id="report-content">
+
+<div class="lead" id="summary">
+  <h2>Коротко</h2>
+  <ul>
+    <li><b>Дедушка Михаил Иосифович Шапедько воевал.</b> Его призвали в 17 лет, осенью 1943 года. Он был автоматчиком, в феврале 1944-го был ранен и получил медаль «За отвагу».</li>
+    <li><b>Прадедушка Александр Тимофеевич Кузов прошёл всю войну военным фельдшером.</b> Он воевал под Ленинградом, был дважды ранен и контужен, награждён орденом Красной Звезды.</li>
+    <li><b>Прадедушка Иосиф Шапедько тоже нашёлся в документах.</b> Его сын Фёдор, брат дедушки Михаила, пропал без вести на войне в 1943 году.</li>
+    <li><b>Лужки, откуда родом бабушка Раиса, — старинное село староверов.</b> В 1914 году там жило больше 5700 староверов и всего 131 прихожанин единоверческой церкви.</li>
+    <li><b>Род Шапедько живёт в Великой Топали больше 300 лет.</b> В списке прихожан 1742 года записан Пётр Макарович Шапетка (около 1662 г. р.) с сыном Кондратом — верх древа Алексея. Родословная книга дальней родственницы независимо подтверждает линию от Ивана и Ефима до дедушки Михаила и папы.</li>
+    <li><b>Пока ничего не известно о прадедушке Михаиле Жгутове и прабабушке Таисии Поляковой.</b> Их имена должны быть в свидетельстве о рождении дедушки Виктора.</li>
+  </ul>
+</div>
+
+<h2 id="shapedko">Папина линия: Шапедько из Великой Топали</h2>
+<p>Фамилия Шапедько очень редкая и почти вся «живёт» в одном селе — Великой Топали, между Клинцами и Климовом. В военных архивах нашлось полтора десятка Шапедько, и все они оттуда. Значит, это одна большая семья, давно осевшая на одном месте.</p>
+
+<div class="person m" id="p-mikhail">
+  <h3>Дедушка — Михаил Иосифович Шапедько</h3>
+  <p class="yrs">родился в 1926 году в Великой Топали</p>
+  <p>Осенью 1943 года, когда Брянщину освободили от немцев, дедушку призвали в армию: ему было 17 лет. Он попал автоматчиком в 1174-й стрелковый полк. В бою 25 февраля 1944 года его ранило, и за этот бой ему дали медаль «За отвагу». Вот как об этом написано в наградном списке:</p>
+  <p class="quote">«Автоматчика роты автоматчиков рядового Шапедько Михаила Иосифовича за то, что он в бою 25 февраля 1944 года в составе 1174 стрелкового полка проявил мужество и отвагу, в результате получил одно лёгкое ранение. 1926 года рождения, член ВЛКСМ, русский, призван в РККА Клинцовским РВК Орловской области»</p>
+  <p class="small">РККА — Рабоче-крестьянская Красная армия; РВК — районный военный комиссариат (военкомат).</p>
+  <p>После госпиталя дедушка вернулся на фронт и в конце войны служил в самоходной артиллерии на 1-м Украинском фронте. Войну он закончил сержантом. <span class="tag ok">есть документ</span></p>
+  <p>О дедушке рассказывает и родословная книга «История рода Шапедько»: её написала дальняя родственница по папиной линии, Татьяна Ивановна Буракова, по рассказам своей ветви семьи. По книге его тоже забрали на фронт в 17 лет, сразу после освобождения Топали, и он был ранен. Среди его детей там назван и Сергей — это ваш папа. Книга и древо Алексея составлены независимо друг от друга, а сходятся они с документами. <span class="tag ok">подтверждено</span></p>
+  <figure class="docfig"><img src="источники/A-0009_ПН_ЦАМО-33-690306-3603_кадр770_строка42.jpg" alt="Наградной список 1945 года, строка про Шапедько Михаила Иосифовича"><figcaption>Наградной список 1945 года; строка про дедушку выделена розовым.</figcaption></figure>
+  <p class="small">Откуда это известно: имя, отчество, 1926 год рождения и место рождения — село Великая Топаль — записаны в военных документах; год рождения — со слов родителей; других Михаилов Иосифовичей Шапедько в военных базах нет.</p>
+</div>
+
+<div class="person m" id="p-iosif">
+  <h3>Прадедушка — Иосиф Шапедько</h3>
+  <p class="yrs">в 1949 году жил в Великой Топали</p>
+  <p>Прадедушку Иосифа мы нашли через его сына Фёдора, брата дедушки Михаила. Фёдор родился в 1919 году, ушёл на фронт в августе 1941-го и в декабре 1943-го пропал без вести. В 1949 году военкомат составлял списки пропавших и записал о нём всё, что знал. Строка списка целиком:</p>
+  <p class="quote">«Шапедько Федор Иосифович, 1919 г. р., беспартийный, рядовой, уроженец В. Топаль Клинцовского района. Призван Клинцовским ГВК 20.8.41 г. Можно считать пропавшим без вести 12.43 г. Ближайший родственник: отец Шапедько Иосиф Андреев[ич], В. Топаль»</p>
+  <p> Так что Иосиф пережил войну и в 1949 году жил дома. <span class="tag ok">есть документ</span></p>
+  <p><b>1919 год.</b> В «Алфавитном списке мобилизованных граждан, принятых на военную службу по Великотопальской волости» Новозыбковского уездного военного комиссариата Иосиф записан так:</p>
+  <p class="quote">«№ 16/2203. Шапедько Иосиф Андрианович. Местожительство: Великая Топаль. Год рождения: 1892. Сколько времени служил в старой армии: 4 года. Род войск в старой армии: пулемётчик. Звание и должность в старой армии: ефрейтор. Когда принят на службу в Красную Армию: 5 мая. Когда и в какую часть был направлен: 5 мая»</p>
+  <p class="small">Брянский областной архив, ф. Р-839, оп. 1, д. 142. Расшифровка опубликована в группе села Великая Топаль ВКонтакте. Снимка страницы с этой записью в группе нет, поэтому строка приведена по расшифровке. Отсюда год рождения Иосифа — 1892 — и его отчество «Андрианович». <span class="tag ok">есть документ</span></p>
+  <h4>Как жил — по документам</h4>
+  <ul class="life">
+  <li><b>1892</b> — год рождения (список мобилизованных 1919 г.).</li>
+  <li><b>До 1919</b> — 4 года в «старой», то есть царской, армии: пулемётчик, ефрейтор (там же).</li>
+  <li><b>5 мая 1919</b> — принят на службу в Красную армию (там же).</li>
+  <li><b>1919</b> — родился сын Фёдор; <b>1926</b> — сын Михаил, дедушка (военные документы сыновей).</li>
+  <li><b>1922</b> — домохозяин в Великой Топали: записан в списках плательщиков масло-яичного и трудгужевого налогов (ГАБО, ф. Р-934, оп. 1, д. 25; ф. 805, оп. 1, д. 73).</li>
+  <li><b>1923–1924</b> — хозяйство «Шапетько Иосифа Андрианова»: 5 едоков (поселенный список плательщиков сельхозналога, ГАБО, ф. Р-805, оп. 1, д. 157).</li>
+  <li><b>1949</b> — жив, живёт в Великой Топали (список военкомата о пропавшем без вести сыне Фёдоре).</li>
+  </ul>
+  <figure class="docfig"><img src="источники/A-0003_фрагмент_для_отчёта.jpg" alt="Список 1949 года: Шапедько Федор Иосифович, отец Шапедько Иосиф Андреевич"><figcaption>Список пропавших без вести, 1949 год. Справа: «Отец Шапедько Иосиф Андреев.»</figcaption></figure>
+  <p>Жену Иосифа звали Марина; её девичья фамилия пока неизвестна. Марину вспоминает и родословная книга: на старой семейной фотографии она подписана «Марина — жена его сына Иосифа Андриановича». <span class="tag fam">со слов семьи</span></p>
+</div>
+
+<div class="person m" id="andrian">
+  <h3>Прапрадедушка — Андриан Ефимович Шапедько</h3>
+  <p>Что о нём записано в разных источниках:</p>
+  <ul>
+  <li><b>Древо Алексея</b> (со слов родителей): отец Иосифа — Андриан, сын Ефима; Андрей — брат Андриана.</li>
+  <li><b>Родословная книга Т. И. Бураковой</b> (по рассказам другой ветви рода): Андриан и Андрей — сыновья Ефима; Иосиф — сын Андриана. Под старой фотографией подпись: «Марина — жена его сына Иосифа Андриановича».</li>
+  <li><b>Список военкомата 1949 года:</b> отец Фёдора записан как «Шапедько Иосиф Андреев.».</li>
+  <li><b>Военные документы о Михаиле Шапедько 1910 г. р. из Великой Топали:</b> в одних записях его отчество «Андреевич», в других — «Андрианович» и «Андриянович».</li>
+  </ul>
+  <p><b>1922 год — налоговый список села.</b> В июле 1922 года волость составила «Список граждан села Великая Топаль, не выполнивших масло-яичного налога» — по одному домохозяину на двор, всего 487 дворов. Шапетьки в нём записаны так (номера по списку):</p>
+  <p class="quote">«151 Шапетько Максим Захаров; 152 Шапетько Павел Захаров; 228 Шапетько Андрей Ефим[ов]; 233 Шапетько Андриан Ефим[ов]; 235 Шапетько Иван Андр[…]; 237 Шапетько Иосиф Андр[…]»</p>
+  <p class="small">Отчества в списке сокращены: «Андр.» может значить и Андреевич, и Андрианович. Брянский областной архив, ф. Р-934, оп. 1, д. 25, л. 161–165 об. Список целиком переписан в родословной книге Т. И. Бураковой и выложен на форуме ВГД (тема «Жители Новозыбковского уезда», 12.05.2021). <span class="tag ok">есть документ</span></p>
+  <p><b>1898 год — рождение сына Иакова.</b> В метрической книге Преображенской церкви Великой Топали, в части «О родившихся», запись № 71:</p>
+  <p class="quote">«22 октября [родился], 25 октября [крещён] — Иаков. [Родители:] Солдат из крестьян села Великой Топали Андриан Евфимов Шапедька и законная жена его Иулиана Игнатова. Оба православные. [Восприемники:] Того же села солдат из крестьян Димитрий Филиппов Боглай и солдатка Феодора Стефанова Тесленко»</p>
+  <p class="small">Брянский областной архив, ф. 250, оп. 1, д. 3 (метрическая книга за 1898 год). Расшифровка Т. И. Бураковой, опубликована в группе села ВКонтакте вместе со снимками книги. Записи № 71 и № 54 сверены со снимками. В той же книге записано рождение сына Александра у «Андрея Евфимова Шапедьки и законной жены его Домникии Дионисиевой». В списке участников Великой Отечественной войны из Великой Топали есть «Шапедько Яков Андрианович». <span class="tag ok">есть документ</span></p>
+  <p><b>1908 год — покупка земли.</b> В постановлении Черниговского отделения Крестьянского поземельного банка от 21 февраля 1908 года о ссуде товариществу 133 домохозяев Великой Топали на покупку земли у княгини М. П. Долгоруковой записан домохозяин «Шапедько Адриан Евфимович»: в семье 5 мужчин и 2 женщины. <span class="small">(Документ приведён в группе села ВКонтакте, глава «Великая Топаль при М. П. Долгоруковой, 1900–1914».)</span></p>
+  <p><b>1922–1923 годы — списки налогоплательщиков.</b> В «Подворном списке плательщиков трудгужналога» 1922 года (ГАБО, ф. 805, оп. 1, д. 73) подряд записаны «Шапедько Андриан Ефимович» и «Шапедько Осип Андрианович», а в «Поселенном списке плательщиков единого сельхозналога» 1923–1924 годов (ГАБО, ф. Р-805, оп. 1, д. 157) — «Шапетько Андриан Ефимов» и «Шапетько Иосиф Андрианов». <span class="tag ok">есть документ</span></p>
+  <h4>Как жил — по документам</h4>
+  <ul class="life">
+  <li><b>1898–1899</b> — «солдат из крестьян», то есть крестьянин, отслуживший в армии. Так он записан в метрических книгах: при рождении сына Иакова (1898) и как поручитель на трёх свадьбах односельчан (1899).</li>
+  <li><b>1898</b> — жена Иулиана Игнатова; родился сын Иаков (22 октября). Иосиф родился в 1892 году, но его метрика не найдена, поэтому записано ли имя его матери, неизвестно; в древе Иулиана стоит с пометкой «возможно».</li>
+  <li><b>1908</b> — вместе со 132 другими домохозяевами села покупает землю у княгини М. П. Долгоруковой через Крестьянский поземельный банк. В семье 5 мужчин и 2 женщины; скота: мелкого 11, коров 2, лошадей 2; покупает 2 десятины 3 сажени; просит ссуду 80 [рублей] (постановление Черниговского отделения Крестьянского поземельного банка от 21.02.1908, № 52).</li>
+  <li><b>1922</b> — домохозяин, платит масло-яичный и трудгужевой налоги (налоговые списки 1922 г.).</li>
+  <li><b>1923–1924</b> — хозяйство «Шапетько Андриана Ефимова»: 8 едоков (поселенный список плательщиков сельхозналога).</li>
+  </ul>
+</div>
+
+<h3>Дальше вглубь — до XVII века</h3>
+<p>По древу Алексея, выше Андриана мужская линия идёт ещё на семь поколений:</p>
+<div class="chain"><span class="p">Макар</span><span class="arr">→</span><span class="p">Пётр</span><span class="arr">→</span><span class="p">Кондрат</span><span class="arr">→</span><span class="p">Василий</span><span class="arr">→</span><span class="p">Фёдор</span><span class="arr">→</span><span class="p">Иван</span><span class="arr">→</span><span class="p">Ефим</span><span class="arr">→</span><span class="p">Андриан</span><span class="arr">→</span><span class="p">Иосиф</span><span class="arr">→</span><span class="p">Михаил</span></div>
+<p><b>Ефим и его отец Иван подтверждаются документом.</b> В 1862 году крестьяне Великой Топали выбирали уполномоченных для выкупа земли у княгини Голицыной. Приговор сельского схода целиком:</p>
+<p class="quote">«1862 года мая 28 дня, мы нижеподписавшиеся Черниговской губернии Новозыбковского уезда ВеликоТопальской волости, временнообязанные крестьяне, поселенные на землях владения Ея Сиятельства княгини Варвары Сергеевны Голицыной, селения Великой Топали, быв в полном собрании сельского схода, в числе более двух третей домохозяев, имели посуждение о переходе с сдельной повинности на оброк и вместе с тем заявлением нашего согласия на выкуп предоставленной нам по уставной грамоте в постоянное пользование надела усадебной оседлости и прочих угодий, и о избрании из среды нашей уполномоченных для составления выкупного договора, с уполномоченным от владелицы Его Сиятельством Князем Павлом Павловичем Голицыным, побуждении чего мы в сем единогласно Приговорили: Так как по уставной грамоте владелица Ея Сиятельство княгиня Варвара Сергеевна Голицына предоставляет нам выкупать как усадебную, так и прочие угодия, то мы изъявляем на это полное свое согласие и переходим тотчас на оброк, избираем из среды себя для составления и подписания за нас выкупного договора с уполномоченным от владелицы сыном ея отставным Гвардии Полковником Его Сиятельством князем Павлом Павловичем Голицыным, шесть человек уполномоченных временнообязанных крестьян нашего селения: Степана Лукьянова, Якова Павлова Молчановых, Павла Андреева Боглая, Степана Антонова Беличева, Степана Исаакова Сидаренка и Ефима Иванова Шапетьку, людей честного и добропорядочного поведения вполне заслуживающих общественного доверия, которые по выкупному договору имеют право входить во всякие сделки и где следует подписываться и что ими по сему делу будет учинено, в том мы спорить и прекословить не должны и не будем, в том на подлинном и подписались»</p>
+<p class="small">Российский государственный исторический архив, ф. 577, оп. 47, д. 1166, л. 57. Текст приведён в родословной книге и в группе села ВКонтакте. Под выкупным договором стоит: «…и за неграмотных Степана Антонова Белычева, Степана Исаакова Сидорка, Ефима Иванова Шапетьку и Павла Андреева Боглаева по их личной и рукаданной просьбе подписался Степан Молчанов». «Временнообязанные» — бывшие крепостные, которые после отмены крепостного права ещё выкупали землю.</p>
+<p> То, что Андриан — сын Ефима, тоже совпадает в книге и в древе Алексея. <span class="tag ok">подтверждено</span></p>
+<p><b>Самый старый документ — 1742 год.</b> В церковном списке прихожан записана семья <b>Петра Макаровича Шапетки</b>, 80 лет, то есть он родился около 1662 года. С ним жена Фёкла Корнилиевна и дети: Малах, Прокопий, Демян, Афанасий, <b>Кондрат</b> (12 лет) и Мария. Запись в скане целиком:</p>
+<p class="quote">«77. Петр Макаров сын Шапетка — 80. Жена его Фекла Корнилиева — 60. Дети их: Малах — 30, Прокопий — 25, Демян — 20, Афанасий — 15, Кондрат — 12, Мария — 16. Невестка его, Малахова жена, Татиана Антонова — 29. Сын ее Илия — 2»</p>
+<p>«Петр Макаров сын» значит Пётр, сын Макара. Это ровно верх древа Алексея — <b>Макар → Пётр → Кондрат</b>, записанный тогда, при жизни этих людей. Подтверждает и родословная книга: братья Прокоп, Афанасий и Кодрат Петровичи живут в Топали и в 1771 году. <span class="tag ok">есть документ</span></p>
+<figure class="docfig"><img src="источники/A-0019_фрагмент_для_отчёта.jpg" alt="Список прихожан 1742 года: Петр Макаров сын Шапетка, жена Фекла, сыновья Малах, Прокопий, Демян, Афанасий, Кондрат"><figcaption>Список прихожан 1742 года, двор 77: «Петр Макаров сын Шапетка — 80», ниже жена и дети, в том числе Кондрат, 12 лет.</figcaption></figure>
+<p><b>1781 год — семья Кондрата.</b> В списке прихожан Великой Топали за 1781 год три брата Петровича живут одним двором, № 39. Запись в скане:</p>
+<p class="quote">«Афанасий Петров Шепетко — 52. Жена его Анастасия Аврамова — 44. Дети их: Михаил — 17, Параскева — 14, Кодрат — 6. Братья родные Афанасовы: Прокоп Петров — 59, Кодрат Петров — 49. Прокопова жена Параскева Стефанова дочь — 54. Дети их: Карп — 34, Лукьян — 24, Григорий — 19, Демьян — 17. Карпова жена Фотиния Афанасова дочь — 24, дочь их Мария — 6. Лукьянова жена Екатерина Андреева дочь — 22. Вышеписанного Кодрата жена Мария Емельянова дочь — 39. Дети их: Василий — 22, Иоанн — 11, Анастасия — 8, Ефросиния — 6, Иоанн — 2. Васильева жена Анастасия Гурьева — 20. Зять их Илья Георгиев — 44, жена его Анастасия Афанасова дочь — 34. Дети их: Феодосия — 8, Лука — 6, Екатерина — 1»</p>
+<figure class="docfig"><img src="источники/A-0021_фрагмент_для_отчёта.jpg" alt="Список прихожан Великой Топали 1781 года, двор 39: Афанасий, Прокоп и Кодрат Петровичи Шапетки с семьями"><figcaption>Список прихожан Великой Топали, 1781 год, двор 39 (Государственный архив Черниговской области, ф. 679, оп. 1, д. 328). <span class="tag ok">есть документ</span></figcaption></figure>
+<p><b>1721 год.</b> В «Книге переписной» 1721 года по местечку Тапал среди «мужитцких дворов» Саввы Рагузинского записан «Петр Макаров син Шапетка». В этой переписи дворы Топали разделены на «старшинский», «казатцкие» и «мужитцкие»: мужицкие — это дворы крестьян (посполитых), которые не несли казацкой службы и были подданными владельца местечка, графа Саввы Рагузинского (Архив внешней политики Российской империи, ф. 124, оп. 1, д. 62, л. 67; скан выложен на сайте Историко-документального департамента МИД; расшифровка исследователя jrserg совпадает с подлинником).</p>
+<figure class="docfig"><img src="источники/A-0028_1721_АВПРИ_л67_Петр_Макаров_Шапетка.jpg" alt="Переписная книга 1721 года, лист 67: Артем Титов, Кирила Титов, Петр Макаров син Шапетка, Порхом Курбатенок"><figcaption>«Книга переписная» 1721 года, лист 67, мужицкие дворы Рагузинского: «Артем Титов, Кирила Титов, <b>Петръ Макаровъ сн Шапетка</b>, Порхом Курбатенок». <span class="tag ok">есть документ</span></figcaption></figure>
+<p><b>1764 год.</b> Ревизия Стародубского полка, Топальская сотня:</p>
+<p class="quote">«Демян Шепетко — 45. Брати его Афанас — 35, Кондрат — 30. Син Апанасов Федор — 7. Кондратов син Васил — 5»</p>
+<p class="small">ЦГИАК Украины, ф. 51, оп. 3, д. 19348 (расшифровка jrserg, форум ВГД).</p>
+<p><b>1767 год.</b> Подворная опись Топальской сотни:</p>
+<p class="quote">«В оном живёт Дамиан Шапетка, 50 лет, здоров, родимец здешний посполитой. Жена его София 45 лет. Дети их дочери: Акулина, 17 лет. Настасия, 12 лет. Евдокия, 9 лет. Братья Демеана родные: 1. Афонасий, 40 лет. Жена его Марфа, 30 лет. Здоровы. Дети их: Фёдор, 12 лет. Михей, 3 года. Евдокия, 6 лет. 2-й брат Кондрат, 33 года. Жена его Васса, 30 лет. Дети их: Василий, 6 лет. Мария, 11 лет. Мать их Фёкла, 80 лет, по старости слаба»</p>
+<p class="small">ЦГИАК Украины, ф. 57, оп. 1, д. 110 (снимки на FamilySearch; расшифровка опубликована в группе села ВКонтакте). В 1742 году жена Петра Шапетки — «Фекла Корнилиева», 60 лет; в 1767 году «мать их Фёкла, 80 лет» живёт с сыновьями. Значит, Фёкла — мать Кондрата. Мать Василия, судя по описи 1767 года («Жена его Васса… Дети их: Василий, 6 лет»), — Васса. В 1781 году жена Кондрата записана уже как Мария Емельянова дочь, 39 лет: видимо, это вторая жена, документа о браке нет. В том же 1781 году у Василия Кондратовича жена Анастасия Гурьева, 20 лет; кто мать Фёдора Васильевича, документ не говорит, поэтому в древе она с пометкой «возможно».</p>
+<p><b>1805 год — Фёдор Васильевич и его сын Иван.</b> Метрическая книга Преображенской церкви за 1805 год:</p>
+<p class="quote">«23 сентября. От крестьянина жителя топальского Фёдора Васильевича Шапетко и жены его Агафии Демьяновны Баглаевой родился сын Иван. Крещён 23 сентября священником Филиппом Лемешевичем. Восприемником оному младенцу от святого крещения был житель топальский крестьянин Прокоп Моисеевич Шаколо»</p>
+<p class="small">Брянский областной архив, ф. 141, оп. 1, д. 5. Расшифровка Т. И. Бураковой, опубликована в группе села ВКонтакте. Запись сверена со снимком книги: в подлиннике «Феодора Васильева сына Шапетки и жены его Агафии … Боглаевой». В той же книге записаны дети Кондрата: «Степан Кондратович Шапетко» с женой Варварой Кирилловной Масловой и «Анастасия Кондратьевна Шапетько», жена Ивана Трофимовича Сидорко. <span class="tag ok">есть документ</span></p>
+<h4>Как жили — по документам</h4>
+<ul class="life">
+<li><b>Пётр Макарович Шапетка</b> (около 1662 г. р.). В 1721 году — хозяин «мужицкого» (крестьянского, не казацкого) двора; такие дворы принадлежали владельцу Топали графу Савве Рагузинскому, и крестьяне были его подданными. В ревизии 1740 года его двор записан среди «малогрунтовых», то есть с небольшим наделом. В 1742 году ему 80 лет; он в разделе «посполитые» (крестьяне, не казаки); жена Фекла Корнилиева, 60 лет; сыновья Малах (30), Прокопий (25), Демьян (20), Афанасий (15), Кондрат (12), дочь Мария (16).</li>
+<li><b>Кондрат Петрович</b> (около 1730–1734 г. р.). В 1767 году живёт одним двором с братьями Дамианом и Афанасием: «родимец здешний посполитой». Во дворе: изба, 2 амбара, 2 клети, «олейницкая» (маслобойня), 2 хлева, сарай, баня, гумно с деревянным овином. Пашни — одна «чверть», сеют рожь; огород под коноплю; лесного сенокоса на 20 возов, болотного на 10; скота: 4 лошади, 6 овец, 3 свиньи; «на консистенцию» (постой войск) платят 2 рубля в год. В 1781 году — тот же общий двор № 39, вместе с братьями Афанасием и Прокопом.</li>
+<li><b>Фёдор Васильевич Шапетко</b>. В 1805 году — «крестьянин житель топальский»; жена Агафия Демьяновна Баглаева; в этом году у них родился сын Иван, а сам Фёдор стал крёстным сына Василия Замесова.</li>
+<li><b>Ефим Иванович Шапетька</b>. В 1862 году — временнообязанный крестьянин княгини В. С. Голицыной; сход выбрал его одним из шести уполномоченных «людей честного и добропорядочного поведения» для выкупа земли. Сам он был неграмотным: за него расписался Степан Молчанов.</li>
+</ul>
+<p><b>Что получается по документам.</b> В древе Алексея: Кондрат → Василий → Фёдор → Иван → Ефим. В документах: у Кондрата есть сын Василий (1764, 1767, 1781); в 1805 году у Фёдора Васильевича Шапетко родился сын Иван; в 1862 году в Великой Топали жил Ефим Иванов Шапетька. Документ, где Ефим Иванович записан вместе со своим отцом, пока не найден.</p>
+<p>Получается, что род Шапедько живёт в Великой Топали больше трёхсот лет. Старое написание фамилии — <b>Шапетка</b>, потом Шапетько, а позже Шапедько.</p>
+
+<h2 id="feshchenko">Бабушкина линия: Фещенко</h2>
+<div class="person f">
+  <h3>Бабушка — Наталья Васильевна Шапедько, урождённая Фещенко</h3>
+  <p class="yrs">26 февраля 1932, Великая Топаль — июнь 2023</p>
+  <p>Бабушка Наталья родом из того же села, что и дедушка Михаил. Её отец — <b>Василий Фещенко</b>, мать — <b>Матрёна</b>, дед — <b>Семён</b>, прадед — <b>Лаврентий</b>. <span class="tag fam">со слов семьи</span></p>
+  <p><b>1898 год.</b> В метрической книге Преображенской церкви Великой Топали, запись о рождении № 19:</p>
+  <p class="quote">«1 марта [родилась], 1 марта [крещена] — Евдокия. [Родители:] Крестьянин села Великой Топали Семион Лаврентиев Фещенко и законная жена его Ольга Гаврилова. Оба православные. [Восприемники:] Того же села солдат из крестьян Митрофан Наумов Белик и крестьянка Евдокия Андреева Лайкова»</p>
+  <p class="small">Брянский областной архив, ф. 250, оп. 1, д. 3. Расшифровка Т. И. Бураковой в группе села ВКонтакте. Василий Семёнович родился в 1909 году, через одиннадцать лет после этой записи, поэтому была ли Ольга Гаврилова его матерью, неизвестно; в древе она с пометкой «возможно». «Фещенко Семен Лавренов» записан и в поселенном списке плательщиков сельхозналога 1923–1924 годов (ГАБО, ф. Р-805, оп. 1, д. 157). <span class="tag ok">есть документ</span></p>
+  <h4>Семён Лаврентьевич — как жил по документам</h4>
+  <ul class="life">
+  <li><b>1898</b> — «крестьянин села Великой Топали», жена Ольга Гаврилова, родилась дочь Евдокия (1 марта).</li>
+  <li><b>1922</b> — домохозяин, в списке не выполнивших масло-яичный налог (№ 202).</li>
+  <li><b>1923–1924</b> — хозяйство из 3 едоков (поселенный список плательщиков сельхозналога).</li>
+  </ul>
+  <p>В том же налоговом списке 1922 года (о нём — выше, у Андриана) под № 202 записан домохозяин <b>«Фещенко Семен Лавренов»</b>, то есть Семён Лаврентьевич. Других Фещенко с отчеством Лаврентьевич в списке нет. <span class="tag ok">есть документ</span></p>
+  <p>В военных архивах есть записи о Василии Семёновиче Фещенко, 1909 года рождения, уроженце Великой Топали: в 1941 году он призван в Ставропольском крае, в графе «жена» в одном документе записана Елена Стефановна Алимова, в другом — Любовь Краснова. О том, тот ли это Василий, что в древе Алексея, сами документы ничего не говорят. <span class="tag ok">есть документ</span></p>
+</div>
+
+<h2 id="zhgutov">Мамина линия: Жгутовы из Климова</h2>
+<div class="person m">
+  <h3>Дедушка — Виктор Михайлович Жгутов</h3>
+  <p class="yrs">22 июня 1943 — 4 февраля 1993, Климово</p>
+  <p>Дедушка Виктор родился в Климове в 1943 году, когда посёлок ещё был под немцами: его освободили только в сентябре 1943-го. Его родители — <b>Михаил Жгутов</b> и <b>Таисия Ивановна Полякова</b> (её отец — Иван Поляков). Больше о них семья ничего не знает. <span class="tag fam">со слов семьи</span></p>
+  <p>В военных архивах подходящего Михаила Жгутова нет. Значит, либо он не погиб на войне, либо не воевал: архивы, открытые в интернете, в основном про погибших и награждённых. Проще всего найти прадедушку и прабабушку через <b>свидетельство о рождении дедушки Виктора</b>: там записаны оба родителя, полностью, с отчествами. Если оно не сохранилось, копию можно запросить в ЗАГСе Климовского района.</p>
+</div>
+
+<h2 id="kuzov">Мамина линия: Кузовы и Кожемяки из Лужков</h2>
+<p><b>Лужки</b> — село в Стародубском районе, примерно в 40 км к востоку от Климова. Его основали староверы около 1700 года. В начале XIX века Лужки стали центром особого течения староверов — «лужковцев». Когда в 1822 году власти разрешили староверам держать своих священников при условии, что те будут вести церковные книги, лужковцы отказались. Записывать своих детей в казённые книги они не хотели. Поэтому о таких семьях в старых архивах обычно очень мало сведений. По рассказам семьи, линия прабабушки Варвары — из староверов.</p>
+
+<div class="person f">
+  <h3>Бабушка — Раиса Александровна Супрун, урождённая Кузова</h3>
+  <p class="yrs">6 марта 1942, Лужки — 14 июля 2021 или 2022, Климово</p>
+  <p>Бабушка Раиса родилась в Лужках в разгар войны и потом переехала в Климово. Супрун — фамилия по мужу: в древе Алексея рядом с бабушкой указан Алексей Супрун. Первым или вторым был этот брак, пока не выяснено. <span class="tag fam">со слов семьи</span></p>
+</div>
+
+<div class="person m" id="p-kuzov">
+  <h3>Прадедушка — Александр Тимофеевич Кузов</h3>
+  <p class="yrs">сентябрь 1916 — октябрь 1982 · из Лужков</p>
+  <p>Прадедушка был военным фельдшером и служил в армии с 1937 года, ещё до войны. С первых дней войны он был на Волховском фронте, потом под Ленинградом, всю войну в одной дивизии. В бумагах о награждении написано:</p>
+  <p class="quote">«Активный участник боевых операций против немецко-фашистских захватчиков на фронтах Отечественной войны. В бою под гор. Луга, не взирая на сильный артиллерийский огонь противника, лично на поле боя оказывал первую помощь раненым бойцам и командирам. Чуткий и внимательный к больным медицинский работник. В боях с немецкими захватчиками два раза ранен и один раз контужен. Грамотный, дисциплинированный, требовательный к себе и подчинённым командир. Много трудится над повышением своих военных и политических знаний. Хорошо проводит работу по оказанию помощи на пунктах ПМП. За участие в боях с немцами, в которых был 2 раза ранен и один раз контужен, за трудолюбие по службе — ходатайствую о награждении фельдшера гвардии старшего лейтенанта медицинской службы Кузова А. Т. орденом „Красная Звезда“. Командир 891 стр. Рижского полка подполковник Овчар. 28 мая 1945 года»</p>
+  <p class="small">ПМП — полковой медицинский пункт.</p>
+  <figure class="docfig"><img src="источники/A-0016_ПН_Кузов_АТ_наградной_лист_КЗ_характеристика.jpg" alt="Наградной лист Кузова А. Т.: текст характеристики и подпись командира полка Овчара, 28 мая 1945 года"><figcaption>Наградной лист, вторая половина: описание подвига, подпись командира полка и печать.</figcaption></figure>
+  <p>Награды: <b>орден Красной Звезды</b>, медали <b>«За оборону Ленинграда»</b> и <b>«За победу над Германией»</b>. Из армии он ушёл в конце 1946 года гвардии старшим лейтенантом медицинской службы. <span class="tag ok">есть документ</span></p>
+  <figure class="docfig"><img src="источники/A-0016_ПН_Кузов_АТ_наградной_лист_КЗ.jpg" alt="Наградной лист к ордену Красной Звезды: Кузов Александр Тимофеевич"><figcaption>Наградной лист к ордену Красной Звезды (начало). Его нашла мама.</figcaption></figure>
+  <p class="small">День рождения у семьи — 12 сентября, в армейских документах — 15 сентября 1916 года. Такая разница бывает часто; точную дату покажет свидетельство о рождении или паспорт. Его отец — <b>Тимофей Кузов</b>; отчество «Тимофеевич» в документах это подтверждает.</p>
+</div>
+
+<div class="person f">
+  <h3>Прабабушка — Варвара Савельевна Кузова, урождённая Кожемяка</h3>
+  <p class="yrs">10 декабря 1923 — 9 ноября 2012 · из Лужков</p>
+  <p>Прабабушка Варвара — из староверов. Её родители — <b>Савелий и Анна Кожемяка</b>. Фамилию пишут по-разному, и «Кожемяка», и «Кожемяко»; как было в документах, покажет свидетельство о браке или паспорт. <span class="tag fam">со слов семьи</span></p>
+  <p>Мы проверили список прихожан единоверческой церкви Лужков за 1914 год. В ней числилось всего <b>131 человек в 25 дворах</b>, а в итоговой строке священник записал: <i>«сверх того раскольников 5713»</i>. Значит, почти всё село — около 98 % жителей — были староверами, которых в церковные списки не вносили. Кузовых и Кожемяк среди прихожан единоверческой церкви в этом списке нет. <span class="tag ok">есть документ</span></p>
+<figure class="docfig"><img src="источники/A-0018_FS_Лужки_1914_итоги_стр12.jpg" alt="Итоги исповедной ведомости Лужков за 1914 год: сверх того раскольников 5713"><figcaption>Итоговая страница списка прихожан Лужков, 1914 год. Внизу: «Сверх того раскольников — 2688 мужчин, 3025 женщин, всего 5713».</figcaption></figure>
+<p>Поэтому в дореволюционных церковных книгах записей о Кузовых и Кожемяках ждать не стоит. Где их искать:</p>
+  <ul>
+  <li><b>Рождение прабабушки Варвары (декабрь 1923 г.)</b> записано уже в советском ЗАГСе. Книги рождений 1923 года по Воронокской волости, куда входили Лужки, хранятся в Брянском областном архиве (фонд Р-3083, дела 445–447). В интернете их нет, нужен запрос.</li>
+  <li><b>Рождение прадедушки Александра (1916 г.)</b> должно быть в книге староверческой общины. С 1906 года такие книги вели сами общины. Книгу общины Лужков в каталоге Брянского архива найти не удалось, но есть книга соседней староверческой общины Елионки за 1910–1918 годы — её стоит проверить.</li>
+  <li><b>Личное дело офицера.</b> Прадедушка был кадровым офицером, а в личных делах офицеров обычно лежит автобиография с именами родителей, жены и детей. Его можно запросить в Центральном архиве Министерства обороны.</li>
+  </ul>
+</div>
+
+<h2 id="map">Где жила семья</h2>
+<p>Все предки, о которых мы что-то знаем, жили совсем рядом — в одном уголке Брянщины, на расстоянии 20–40 км друг от друга. До революции это была Черниговская губерния.</p>
+<figure class="docfig">
+<div class="mapwrap"><svg class="migmap" viewBox="0 0 760 534" role="img" aria-labelledby="mt md" xmlns="http://www.w3.org/2000/svg"><title id="mt">Карта мест семьи</title><desc id="md">Юго-запад Брянской области: Великая Топаль, Климово и Лужки. Пунктир — переезды в Климово, известные со слов семьи.</desc>
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="var(--accent)"/></marker></defs>
+<path d="M408.1,271.5 Q272.2,306.3 187.7,407.6" class="route" marker-end="url(#arr)"/>
+<text x="274" y="316" text-anchor="middle" class="rlab">переезд Шапедько</text>
+<path d="M530.3,443.5 Q352.4,470.4 189.7,417.6" class="route" marker-end="url(#arr)"/>
+<text x="354" y="471" text-anchor="middle" class="rlab">переезд бабушки Раисы</text>
+<circle cx="408.1" cy="271.5" r="8" class="pt family"/><text x="420.1" y="268.5" text-anchor="start" class="pn family">Великая Топаль</text>
+<text x="420.1" y="285.5" text-anchor="start" class="pnote">Шапедько, Фещенко</text>
+<circle cx="181.7" cy="413.6" r="8" class="pt family"/><text x="193.7" y="410.6" text-anchor="start" class="pn family">Климово</text>
+<text x="151.7" y="459.6" text-anchor="middle" class="pnote">Жгутовы; здесь родились вы</text>
+<circle cx="530.3" cy="443.5" r="8" class="pt family"/><text x="542.3" y="440.5" text-anchor="start" class="pn family">Лужки</text>
+<text x="542.3" y="457.5" text-anchor="start" class="pnote">Кузовы, Кожемяки; староверы</text>
+<circle cx="339.2" cy="76.0" r="4" class="pt ref"/><text x="351.2" y="73.0" text-anchor="start" class="pn ref">Клинцы</text>
+<text x="351.2" y="90.0" text-anchor="start" class="pnote">здесь призывали Шапедько</text>
+<circle cx="631.7" cy="232.6" r="4" class="pt ref"/><text x="621.7" y="229.6" text-anchor="end" class="pn ref">Стародуб</text>
+<text x="621.7" y="246.6" text-anchor="end" class="pnote">здесь призвали Кузова</text>
+<line x1="573.3" y1="26" x2="736" y2="26" class="scale"/><text x="654.6" y="18" text-anchor="middle" class="pnote">20 км</text>
+<text x="14" y="24" class="pnote">↑ север · Брянская область, юго-запад</text></svg></div>
+<figcaption>Пунктиром — переезды в Климово, о которых известно со слов семьи; когда именно переехали, пока не выяснено.</figcaption>
+</figure>
+<h3>Военные дороги</h3>
+<ul>
+<li><b>Прадедушка Александр Кузов:</b> призван в армию в Стародубе в 1937 году → с 1941-го Волховский фронт → с 1942-го Ленинградский фронт, бои под Лугой → после Победы служил до конца 1946 года.</li>
+<li><b>Дедушка Михаил Шапедько:</b> призван в Клинцах осенью 1943 года → пехота, ранен в феврале 1944-го → госпиталь → снова на фронт, самоходная артиллерия, 1-й Украинский фронт.</li>
+<li><b>Фёдор Шапедько</b>, брат дедушки: ушёл на фронт в 1941-м, пропал без вести в декабре 1943-го.</li>
+</ul>
+
+<h2 id="unclear">Что пока непонятно</h2>
+<ul>
+<li>Как звали отца прадедушки Иосифа: <b>Андриан</b> или <b>Андрей</b>? Обе ветви семьи помнят Андриана, а в одном документе 1949 года написано «Андреевич».</li>
+<li>Были ли между Кондратом и Иваном ещё Василий и Фёдор, как в древе Алексея, или Иван — прямо сын Кондрата, как в книге?</li>
+<li>Кто такой прадедушка <b>Василий Фещенко</b> и что с ним стало?</li>
+<li>Всё о прадедушке <b>Михаиле Жгутове</b> и прабабушке <b>Таисии Поляковой</b>.</li>
+<li>Девичьи фамилии прабабушек <b>Марины</b> (жены Иосифа) и <b>Матрёны</b> (жены Василия Фещенко).</li>
+<li>Точный год смерти бабушки Раисы: 2021 или 2022?</li>
+</ul>
+
+<h2 id="questions">Вопросы для разговора</h2>
+<p>Подсказки, как лучше расспрашивать. Запишите разговор на телефон, если человек не против. Начните с фотографий и документов: они помогают вспомнить. Не поправляйте, если дата кажется неверной, — даты потом проверим по бумагам, а рассказ есть только у вас. Спрашивайте «как это было», а не «в каком году». Лучше несколько коротких разговоров, чем один длинный.</p>
+<h3>Самое важное</h3>
+<ul class="qlist">
+<li>Есть ли дома <b>свидетельство о рождении дедушки Виктора Жгутова</b>, его паспорт или военный билет? Там записаны его родители.</li>
+<li>Какие ещё свидетельства о рождении, браке, смерти лежат дома? Достаточно их сфотографировать.</li>
+<li>Дедушка Михаил: что рассказывал о войне и о ранении? Сохранились ли медаль, удостоверение к ней, фото в форме? Когда он умер и где похоронен?</li>
+<li>Как звали отца прадедушки Иосифа — Андриан или Андрей? Какая девичья фамилия у прабабушки Марины?</li>
+</ul>
+<h3>Люди</h3>
+<ul class="qlist">
+<li>Что известно о прадедушке Михаиле Жгутове: откуда он, кем работал, воевал ли, жил ли с семьёй?</li>
+<li>Что известно о прабабушке Таисии Поляковой: где жила, кем работала, были ли у неё братья и сёстры?</li>
+<li>Прадедушка Василий Фещенко: уезжал ли он из Топали до войны, например на Ставрополье? Вернулся ли с войны? Какая девичья фамилия у прабабушки Матрёны?</li>
+<li>Что помнят о прапрадедушках Тимофее Кузове и Савелии Кожемяке?</li>
+</ul>
+<h3>Вера и Лужки</h3>
+<ul class="qlist">
+<li>Как в семье называли свою веру: «староверы», «лужковцы», «единоверцы»?</li>
+<li>Была ли в Лужках молельня или церковь? Где крестили детей?</li>
+<li>Остались ли дома старые иконы, книги, лестовки (староверские чётки)? Иногда на последних страницах старых книг записывали, кто когда родился и умер.</li>
+</ul>
+<h3>Переезды и жизнь</h3>
+<ul class="qlist">
+<li>Когда и почему Шапедько переехали из Великой Топали в Климово? Когда бабушка Раиса переехала из Лужков? Как познакомились бабушка Раиса и дедушка Виктор?</li>
+<li>Как семья пережила оккупацию в 1941–1943 годах? Уходил ли кто-то в партизаны, угоняли ли кого-то в Германию?</li>
+<li>Кем работали прадеды и прабабушки? Есть ли трудовые книжки, грамоты?</li>
+<li>Откуда, по семейным рассказам, фамилия Шапедько? Кто записал длинную цепочку от Макара до Ефима?</li>
+<li>Кто ещё из родни может что-то помнить или хранить фотографии?</li>
+</ul>
+
+<h2 id="next">Что можно сделать дальше</h2>
+<ol>
+<li><b>Поговорить с родителями</b> по вопросам выше и сфотографировать документы, которые есть дома. Это самое быстрое и самое полезное.</li>
+<li><b>Запросить документы в ЗАГСе.</b> Если каких-то свидетельств дома нет, копию можно получить в ЗАГСе: Климовского района — по Шапедько и Жгутовым, Стародубского — по Кузовым. Их выдают прямым потомкам, если показать цепочку свидетельств о рождении. Могу подготовить текст заявления.</li>
+<li><b>Запросить личное дело прадедушки Кузова</b> в Центральном архиве Министерства обороны: там его автобиография и имена родителей.</li>
+<li><b>Посмотреть старые церковные записи</b> Великой Топали и Лужков, которые выложены в интернете. По ним можно найти рождение прадедушки Иосифа, имя его отца и предков Кузовых и Кожемяк до революции.</li>
+<li><b>Запросить в районном архиве похозяйственные книги</b> сельсоветов Великой Топали и Лужков за 1930–1950-е годы. В них по каждому двору записан состав семьи с годами рождения.</li>
+</ol>
+
+<h2 id="sources">Откуда взяты сведения</h2>
+<p class="small">Для тех, кто захочет проверить сам. ЦАМО — Центральный архив Министерства обороны; его документы открыты на сайтах «Память народа» и «Мемориал».</p>
+<ol class="src">
+<li><b>Древо, которое составил Алексей</b> со слов родителей (январь 2026), и <b>рассказы родителей</b> (ноябрь 2026).</li>
+<li><b>Дедушка Михаил:</b> наградной список 1976-го самоходного артиллерийского полка от 28.04.1945 (ЦАМО, фонд 33, опись 690306, дело 3603); список 18-го запасного полка, 1944 (ЦАМО, ф. 8297, оп. 28626, д. 4 и 8); учётная запись военкомата. <a href="https://pamyat-naroda.ru/heroes/person-hero97247396/">Страница на «Памяти народа»</a>.</li>
+<li><b>Прадедушка Иосиф и Фёдор:</b> список пропавших без вести Клинцовского военкомата от 01.03.1949 (ЦАМО, ф. 58, оп. 977522, д. 77). <a href="https://obd-memorial.ru/html/info.htm?id=72322272">Страница на «Мемориале»</a>.</li>
+<li><b>Родословная книга «История рода Шапедько»</b>, Т. И. Буракова (Кондратенко), Минск, 2023. В ней приведены документы 1771, 1781, 1862 и 1922 годов. В этот отчёт взято только то, что совпадает с другими источниками.</li>
+<li><b>Лужки, 1914:</b> исповедная ведомость Успенской единоверческой церкви посада Лужков (Государственный архив Черниговской области, ф. 679, оп. 1, д. 536), на FamilySearch: фильм 007778837, кадры 20–24.</li>
+<li><b>Путаница Андрей/Андриан:</b> записи о Михаиле Шапедько 1910 г. р. на «Мемориале» и «Памяти народа» (ЦАМО, ф. 58, оп. 977520, д. 104 и др.). <a href="https://obd-memorial.ru/html/info.htm?id=60952222">Страница</a>.</li>
+<li><b>Василий Семёнович Фещенко, 1909:</b> ЦАМО, ф. 58, оп. 18004, д. 271 и 380. <a href="https://obd-memorial.ru/html/info.htm?id=57184503">Страница</a>.</li>
+<li><b>Прадедушка Александр Кузов:</b> наградной лист к ордену Красной Звезды, учётная карточка офицера и другие документы, всего 13. <a href="https://pamyat-naroda.ru/heroes/person-hero93554449/">Страница на «Памяти народа»</a>.</li>
+<li><b>О Лужках и староверах-лужковцах:</b> <a href="https://ru.wikipedia.org/wiki/Лужки_(Стародубский_район)">статья о селе</a>; <a href="https://booksite.ru/fulltext/1/001/007/061/61938.htm">о лужковском согласии</a>. Списки прихожан единоверческой церкви Лужков 1856–1914 (Государственный архив Черниговской области, ф. 679): <a href="https://nashipredki.com/familysearch/1601332">каталог</a>.</li>
+<li><b>1781 год:</b> исповедная ведомость Преображенской церкви Великой Топали, двор 39 (Государственный архив Черниговской области, ф. 679, оп. 1, д. 328, листы 131–178), на FamilySearch: фильм 007779538, кадр 915.</li>
+<li><b>1742 год:</b> исповедная ведомость, двор 77, «Петр Макаров сын Шапетка» (Государственный архив Черниговской области, ф. 679), на FamilySearch: <a href="https://www.familysearch.org/ark:/61903/1:1:X4S2-M2CV">запись</a>, фильм 007779555, кадр 941.</li>
+<li><b>Группа села Великая Топаль ВКонтакте</b> (Т. И. Буракова, А. А. Бодылева): расшифровки и снимки метрических книг 1805, 1898, 1899 гг., описи 1767 г., списка мобилизованных 1919 г., книг ЗАГС 1922 г., налоговых списков 1922–1924 гг.: <a href="https://vk.ru/velikayatopal">группа села Великая Топаль</a>.</li>
+<li><b>1922 год:</b> список граждан села Великая Топаль, не выполнивших масло-яичного налога, 20.07.1922 (Брянский областной архив, ф. Р-934, оп. 1, д. 25, л. 161–165 об.); расшифровка в родословной книге и на <a href="https://forum.vgd.ru/post/5772/127101/p3785179.htm">форуме ВГД</a>.</li>
+<li><b>Брянский областной архив:</b> книги ЗАГС Стародубского уезда 1921–1925 (фонд Р-3083), церкви Стародубского уезда (фонд 255): <a href="https://af.archive-bryansk.ru/">каталог фондов</a>.</li>
+<li><b>Великая Топаль:</b> <a href="https://ru.wikipedia.org/wiki/Великая_Топаль">статья о селе</a>; списки прихожан Преображенской церкви 1742–1781: <a href="https://nashipredki.com/familysearch/1380653">каталог</a>.</li>
+</ol>
+<p class="small">Вопросы для разговора частично основаны на опроснике из открытого навыка <a href="https://github.com/danieltrbn/trabun-skills/tree/main/skills/family-history">family-history</a> (лицензия MIT). Подробные рабочие таблицы исследования лежат в той же папке, что и этот файл.</p>
+</main>
+<footer class="report-footer"><span>Семья Шапедько · ноябрь 2026</span><span><a href="#top">Наверх</a></span></footer>
+</div>
+</body>
+</html>
